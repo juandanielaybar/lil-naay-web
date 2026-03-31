@@ -33,11 +33,29 @@
             border-bottom-right-radius: 40px;
         }
 
+        /* 🔥 IMAGEN CON EFECTO ROJO */
         .header img {
             width: 180px;
             height: 180px;
             border-radius: 20px;
             margin-right: 40px;
+            object-fit: cover;
+
+            box-shadow: 
+                0 0 25px rgba(139, 0, 0, 0.9),
+                0 0 50px rgba(139, 0, 0, 0.6),
+                0 0 80px rgba(139, 0, 0, 0.4);
+
+            transition: 0.4s;
+            border: 2px solid rgba(139,0,0,0.7);
+        }
+
+        .header img:hover {
+            transform: scale(1.08);
+            box-shadow: 
+                0 0 35px red,
+                0 0 70px red,
+                0 0 120px rgba(255, 0, 0, 0.7);
         }
 
         .header h1 {
@@ -53,16 +71,22 @@
             border-radius: 25px;
             text-decoration: none;
             color: white;
+            transition: 0.3s;
         }
 
-        /* CONTENEDOR GENERAL */
+        .btn-main:hover {
+            background: var(--rojo-hover);
+            transform: scale(1.1);
+        }
+
+        /* CONTENEDOR */
         .container {
             max-width: 1000px;
             margin: auto;
             padding: 20px;
         }
 
-        /* SECCIONES TIPO TARJETA */
+        /* SECCIONES */
         .section {
             background: rgba(255,255,255,0.04);
             padding: 30px;
@@ -75,7 +99,7 @@
             margin-bottom: 20px;
         }
 
-        /* LANZAMIENTOS */
+        /* CARDS */
         .launches, .albums {
             display: flex;
             gap: 20px;
@@ -158,7 +182,7 @@
 
     <!-- HEADER -->
     <div class="header">
-        <img src="Lil Naay.png">
+        <img src="Lil Naay.png" alt="LIL NAAY">
         <div>
             <h1>LIL NAAY</h1>
             <p>Artista urbano • Trap</p>
