@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eventos & Tienda</title>
+
+    <style>
+        :root {
+            --rojo: #8b0000;
+            --fondo: #0f0a0a;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #140909, #0f0a0a);
+            color: white;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px 30px;
+            background: rgba(20, 9, 9, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+        }
+
+        /* BOTÓN VOLVER MEJORADO */
+        .back-btn {
+            background: rgba(255,255,255,0.05);
+            padding: 10px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+            .back-btn:hover {
+                background: rgba(139, 0, 0, 0.5);
+                transform: translateX(-5px);
+            }
+
+        /* SECCIONES */
+        .section {
+            padding: 40px;
+            animation: fadeIn 1s ease;
+        }
+
+        /* EVENTOS */
+        .event {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+            .event:hover {
+                transform: scale(1.03);
+                background: rgba(139, 0, 0, 0.3);
+            }
+
+        /* TIENDA */
+        .store {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            align-items: stretch; /* para alinear productos igual */
+        }
+
+        /* PRODUCTOS PRO */
+        .product {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 15px;
+            width: 180px;
+            text-align: center;
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+            .product:hover {
+                transform: translateY(-10px) scale(1.05);
+                background: rgba(139, 0, 0, 0.3);
+            }
+
+            .product img {
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+
+            /* PÁRRAFOS DEL PRODUCTO */
+            .product p {
+                margin: 5px 0;
+            }
+
+        /* PRECIO */
+        .price {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+
+        /* BOTÓN COMPRAR */
+        .btn {
+            margin-top: 10px;
+            padding: 10px;
+            background: var(--rojo);
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+            .btn:hover {
+                background: red;
+                transform: scale(1.05);
+            }
+
+        /* FOOTER LICENCIA */
+        .footer {
+            background: #0a0505;
+            padding: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+            border-top: 1px solid #222;
+            margin-top: 40px;
+        }
+
+            .footer span {
+                color: #ff4d4d;
+            }
+
+        /* ANIMACION */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .store {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <div class="navbar">
+        <a href="index.html" class="back-btn">⬅ Volver</a>
+    </div>
+
+    <!-- EVENTOS -->
+    <div class="section">
+        <h2>🎟️ Eventos</h2>
+
+        <div class="event">
+            📍 Santo Domingo<br />
+            🗓️ 10 Abril 2026
+        </div>
+
+        <div class="event">
+            📍 Santiago<br />
+            🗓️ 25 Abril 2026
+        </div>
+    </div>
+
+    <!-- TIENDA -->
+    <div class="section">
+        <h2>🛍️ Tienda</h2>
+
+        <div class="store">
+
+            <div class="product">
+                <img src="ropa1.jpg" alt="Hoodie LIL NAAY" />
+                <p>Hoodie LIL NAAY</p>
+                <p class="price">$25</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="product">
+                <img src="ropa2.jpg" alt="T-Shirt LIL NAAY" />
+                <p>T-Shirt LIL NAAY</p>
+                <p class="price">$15</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER LICENCIA -->
+    <div class="footer">
+        © 2026 <span>LIL NAAY</span> — Todos los derechos reservados<br />
+        Diseño web por <span>Don Aybar</span>
+    </div>
+
+</body>
+</html>

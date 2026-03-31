@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LIL NAAY - Inicio</title>
+
+    <style>
+        :root {
+            --rojo: #8b0000;
+            --rojo-hover: #b30000;
+            --fondo: #1a0f0f;
+            --texto-secundario: #d6a3a3;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #140909, #3a1a1a);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 50px 30px;
+            background: linear-gradient(90deg, var(--rojo), var(--fondo));
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.6);
+        }
+
+            .header img {
+                width: 180px;
+                height: 180px;
+                border-radius: 20px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+                margin-right: 40px;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+                .header img:hover {
+                    transform: scale(1.05);
+                }
+
+        .header-content {
+            max-width: 600px;
+        }
+
+        .header h1 {
+            font-size: 56px;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+            font-weight: 900;
+            text-shadow: 0 0 10px #b30000;
+        }
+
+        .header p {
+            color: var(--texto-secundario);
+            font-size: 18px;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .btn-main {
+            display: inline-block;
+            margin-top: 25px;
+            background: var(--rojo);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.7);
+        }
+
+            .btn-main:hover {
+                background: var(--rojo-hover);
+                transform: scale(1.1);
+                box-shadow: 0 6px 25px rgba(179, 0, 0, 0.9);
+            }
+
+        .section {
+            padding: 40px 30px;
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            line-height: 1.6;
+            font-size: 18px;
+            color: var(--texto-secundario);
+        }
+
+            .section h2 {
+                color: white;
+                margin-bottom: 25px;
+                font-size: 28px;
+                font-weight: 800;
+                letter-spacing: 1.2px;
+            }
+
+        /* NUEVOS LANZAMIENTOS */
+        .launches {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .launch {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+            .launch:hover {
+                background: rgba(139,0,0,0.3);
+            }
+
+            .launch img {
+                width: 100%;
+                border-radius: 12px;
+                margin-bottom: 10px;
+            }
+
+            .launch p {
+                margin: 0;
+                font-weight: 700;
+                color: #ff4d4d;
+            }
+
+        /* ÁLBUMES Y BÚSQUEDAS */
+        .albums {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .album {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            width: 160px;
+            text-align: center;
+            padding: 15px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+            .album:hover {
+                background: rgba(139,0,0,0.3);
+            }
+
+            .album img {
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 8px;
+            }
+
+            .album p {
+                margin: 0;
+                font-weight: 600;
+                color: #ff6666;
+            }
+
+        /* REDES SOCIALES */
+        .socials {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+            .socials a {
+                color: white;
+                font-size: 30px;
+                margin: 0 15px;
+                transition: color 0.3s ease;
+                display: inline-block;
+                text-decoration: none;
+            }
+
+                .socials a:hover {
+                    color: #ff4d4d;
+                }
+
+                /* Íconos sociales usando emojis */
+                .socials a.facebook::before {
+                    content: "🔵";
+                    margin-right: 6px;
+                }
+
+                .socials a.twitter::before {
+                    content: "🐦";
+                    margin-right: 6px;
+                }
+
+                .socials a.instagram::before {
+                    content: "📸";
+                    margin-right: 6px;
+                }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+                border-radius: 0;
+            }
+
+                .header img {
+                    margin: 0 0 20px 0;
+                    width: 140px;
+                    height: 140px;
+                }
+
+            .header-content h1 {
+                font-size: 42px;
+            }
+
+            .btn-main {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+
+            .launches, .albums {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="Lil Naay.png" alt="LIL NAAY" />
+        <div class="header-content">
+            <h1>LIL NAAY</h1>
+            <p>Artista urbano • Trap</p>
+            <a href="menu.html" class="btn-main">Ver Eventos & Tienda</a>
+        </div>
+    </div>
+
+    <!-- BIOGRAFÍA -->
+    <div class="section">
+        <h2>Biografía</h2>
+        <p>
+            Lil Naay es un artista emergente del género urbano, conocido por su estilo único
+            en el trap latino. Ha ganado popularidad rápidamente en plataformas digitales
+            gracias a su energía, letras auténticas y ritmos modernos. (EL BANDI MAYOR)
+        </p>
+    </div>
+
+    <!-- NUEVOS LANZAMIENTOS -->
+    <div class="section">
+        <h2>🎵 Nuevos Lanzamientos</h2>
+        <div class="launches">
+            <div class="launch">
+                <img src="single1.jpg" alt="Single 1" />
+                <p>Single - Una Baby en Santiago</p>
+            </div>
+            <div class="launch">
+                <img src="single2.jpg" alt="Single 2" />
+                <p>Single - Baby Supreme</p>
+            </div>
+            <div class="launch">
+                <img src="single3.jpg" alt="Single 3" />
+                <p>Single - Pasao de Farmacia</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ÁLBUMES Y BÚSQUEDAS -->
+    <div class="section">
+        <h2> Álbumes y EP </h2>
+        <div class="albums">
+            <div class="album">
+                <img src="THE MVP OF THE YEAR.jpg">
+                <p>The MVP of the Year (2025)</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- REDES SOCIALES -->
+    <div class="section socials">
+        <h2>📱 Síguelo en Redes</h2>
+        <a href="https://facebook.com/lilnaay" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook" class="facebook">Facebook</a>
+        <a href="https://twitter.com/lilnaay" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter" class="twitter">Twitter</a>
+        <a href="https://instagram.com/lilnaay" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" class="instagram">Instagram</a>
+    </div>
+
+</body>
+</html>
